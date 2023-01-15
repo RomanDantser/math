@@ -55,6 +55,22 @@ class LinkedList:
             curr = curr.next
         print(f"There is no value {value} in current list")
 
+    def reverse(self):
+        if not self.head:
+            raise Exception("Executing reversing operation on an empty list, nothing to reverse!")
+        curr = self.head
+        prev = None
+        next = curr.next
+
+        while curr.next:
+            curr.next = prev
+            prev = curr
+            curr = next
+            next = curr.next
+        curr.next = prev
+        self.head = curr
+        return self.head
+
     def create_from_list(self, arr):
         if not len(arr):
             raise ValueError("Passed an empty array")
@@ -78,5 +94,3 @@ class LinkedList:
                 print(f'{curr.data} -> ', end="")
                 curr = curr.next
         print("None")
-
-
