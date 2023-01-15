@@ -1,6 +1,8 @@
+import algorithms.kadane
 import data_strucutres.linked_list as ll
 
 # Some testing on linked list
+'''
 test = ll.LinkedList()
 test.create_from_list([1, 2, 3, 4, 5])
 print(test.length())
@@ -27,3 +29,6 @@ test1 = ll.LinkedList()
 test1.create_from_list([1,2,3,4,5,6,7,8,9,10])
 test1.reverse()
 test1.print_list()
+'''
+print(algorithms.kadane.max_subarray([-2,1,-3,4,-1,2,1,-5,4]))
+
