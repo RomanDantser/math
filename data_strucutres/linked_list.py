@@ -17,13 +17,14 @@ class LinkedList:
             curr = curr.next
 
         return list_length
+
     def insert_at_start(self, value):
         node = Node(value)
         node.next = self.head
         self.head = node
         return self.head
 
-    def insert_after(self, node_value, value):
+    def insert_after_value(self, node_value, value):
         if not self.head:
             raise Exception("The list is empty!")
         curr = self.head
@@ -36,6 +37,9 @@ class LinkedList:
             curr = curr.next
         print(f"There is no value {node_value} in current list")
 
+    def insert_after_position(self, pos, value):
+        # TODO
+        pass
     def delete_at_start(self):
         if not self.head:
             raise Exception("The list is empty, nothing to delete!")
