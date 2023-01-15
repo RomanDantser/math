@@ -1,0 +1,23 @@
+import data_strucutres.linked_list as ll
+
+# Some testing on linked list
+test = ll.LinkedList()
+test.create_from_list([1, 2, 3, 4, 5])
+print(test.length())
+test.print_list()
+test.insert_at_start(0)
+test.print_list()
+test.insert_after(3, 3.5)
+test.print_list()
+test.insert_after(6, 7)
+test.delete_at_start()
+test.print_list()
+test.delete_node(3.5)
+print(test.length())
+test.print_list()
+test.delete_node(1)
+test.print_list()
+test.delete_node(5)
+test.print_list()
+test.delete_node(6)
+print(test.length())
